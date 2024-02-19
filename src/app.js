@@ -1,12 +1,13 @@
 import express from "express"
 import applyMiddleWare from "./middlewares/applyMiddleWare.js"
+import TechTrendsGet from "./routes/techTrendsGetRoute/index.js"
 
 
 const app =express()
 
 
 applyMiddleWare(app)
-
+app.use(TechTrendsGet)
 
 app.get("/health", (req, res)=>{
     res.send("JasShop server is running")
