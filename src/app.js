@@ -1,6 +1,9 @@
 import express from "express"
 import applyMiddleWare from "./middlewares/applyMiddleWare.js"
 import TechTrendsGet from "./routes/techTrendsGetRoute/index.js"
+import DiscountGet from "./routes/discountGetRoute/index.js"
+import KitchenGadetsGet from "./routes/kitchenGadgetsGetRoute/index.js"
+import LaptopGet from "./routes/laptopGetRoute/index.js"
 
 
 const app =express()
@@ -8,9 +11,12 @@ const app =express()
 
 applyMiddleWare(app)
 app.use(TechTrendsGet)
+app.use(DiscountGet)
+app.use(KitchenGadetsGet)
+app.use(LaptopGet)
 
 app.get("/health", (req, res)=>{
-    res.send("JasShop server is running")
+    res.send("Electronia server is running")
 })
 
 
