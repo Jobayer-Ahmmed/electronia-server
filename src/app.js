@@ -7,6 +7,7 @@ import LaptopGet from "./routes/laptopGetRoute/index.js"
 import PhoneGet from "./routes/phoneGetRoute/index.js"
 import RefrigeratorGet from "./routes/refrigeratorGetRoute/index.js"
 import AcGet from "./routes/acGetRoute/index.js"
+import MonitorTVGet from "./routes/monitorTvGetRoute/index.js"
 
 const app =express()
 
@@ -19,6 +20,7 @@ app.use(LaptopGet)
 app.use(PhoneGet)
 app.use(RefrigeratorGet)
 app.use(AcGet)
+app.use(MonitorTVGet)
 
 app.get("/health", (req, res)=>{
     res.send("Electronia server is running")
