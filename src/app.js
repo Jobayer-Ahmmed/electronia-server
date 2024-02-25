@@ -2,6 +2,7 @@ import express from "express"
 import applyMiddleWare from "./middlewares/applyMiddleWare.js"
 import TechTrendsGet from "./routes/techTrendsRoute/techTrendsGetRoute/index.js"
 import DiscountGet from "./routes/discountRoute/discountGetRoute/index.js"
+import DiscountPost from "./routes/discountRoute/discountPostRoute/index.js"
 import KitchenGadetsGet from "./routes/kitchenGadetsRoute/kitchenGadgetsGetRoute/index.js"
 import LaptopGet from "./routes/laptopRoute/laptopGetRoute/index.js"
 import PhoneGet from "./routes/phoneRoute/phoneGetRoute/index.js"
@@ -17,6 +18,7 @@ const app =express()
 applyMiddleWare(app)
 app.use(TechTrendsGet)
 app.use(DiscountGet)
+app.use(DiscountPost)
 app.use(KitchenGadetsGet)
 app.use(LaptopGet)
 app.use(PhoneGet)
