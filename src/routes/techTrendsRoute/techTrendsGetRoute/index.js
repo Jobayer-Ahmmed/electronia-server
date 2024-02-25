@@ -1,5 +1,5 @@
 import express from "express"
-import TechTrendsCollection from "../../models/TechTrends.js"
+import TechTrendsCollection from "../../../models/TechTrends.js"
 
 const router = express.Router()
 

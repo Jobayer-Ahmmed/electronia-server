@@ -6,6 +6,7 @@ const PhoneSchema = new Schema({
     brand: {type: String},
     model: {type: String},
     image: {type: String},
+    rating: {type: Number},
     price: {type: String},
     description: {type: String}
 })

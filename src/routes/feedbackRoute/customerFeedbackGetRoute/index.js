@@ -1,5 +1,5 @@
 import express from "express"
-import CustomerFeedbackCollection from "../../models/CustomerFeedback.js"
+import CustomerFeedbackCollection from "../../../models/CustomerFeedback.js"
 
 
 const router = express.Router()

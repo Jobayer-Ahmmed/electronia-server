@@ -1,5 +1,5 @@
 import express from "express"
-import AcCollection from "../../models/AC.js"
+import AcCollection from "../../../models/AC.js"
 
 
 const router = express.Router()

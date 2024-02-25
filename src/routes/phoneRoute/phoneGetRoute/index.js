@@ -1,5 +1,5 @@
 import express from "express"
-import PhoneCollection from "../../models/Phone.js"
+import PhoneCollection from "../../../models/Phone.js"
 
 
 

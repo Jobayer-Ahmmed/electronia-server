@@ -1,5 +1,5 @@
 import express from "express"
-import RefrigeratorCollection from "../../models/Refrigerator.js"
+import RefrigeratorCollection from "../../../models/Refrigerator.js"
 
 
 const router = express.Router()

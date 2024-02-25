@@ -1,5 +1,5 @@
 import express from "express"
-import KitchenGadgetsCollection from "../../models/KitchenGadgets.js"
+import KitchenGadgetsCollection from "../../../models/KitchenGadgets.js"
 
 const router = express.Router()
 

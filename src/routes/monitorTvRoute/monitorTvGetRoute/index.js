@@ -1,5 +1,5 @@
 import express from "express"
-import MonitorTVCollection from "../../models/MonitorTV.js"
+import MonitorTVCollection from "../../../models/MonitorTV.js"
 
 const router = express.Router()
 

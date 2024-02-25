@@ -1,5 +1,5 @@
 import express from "express"
-import LaptopCollection from "../../models/Laptop.js"
+import LaptopCollection from "../../../models/Laptop.js"
 
 
 const router = express.Router()

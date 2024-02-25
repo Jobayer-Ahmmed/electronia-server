@@ -1,14 +1,15 @@
 import express from "express"
 import applyMiddleWare from "./middlewares/applyMiddleWare.js"
-import TechTrendsGet from "./routes/techTrendsGetRoute/index.js"
-import DiscountGet from "./routes/discountGetRoute/index.js"
-import KitchenGadetsGet from "./routes/kitchenGadgetsGetRoute/index.js"
-import LaptopGet from "./routes/laptopGetRoute/index.js"
-import PhoneGet from "./routes/phoneGetRoute/index.js"
-import RefrigeratorGet from "./routes/refrigeratorGetRoute/index.js"
-import AcGet from "./routes/acGetRoute/index.js"
-import MonitorTVGet from "./routes/monitorTvGetRoute/index.js"
-import Feedback from "./routes/customerFeedbackGetRoute/index.js"
+import TechTrendsGet from "./routes/techTrendsRoute/techTrendsGetRoute/index.js"
+import DiscountGet from "./routes/discountRoute/discountGetRoute/index.js"
+import KitchenGadetsGet from "./routes/kitchenGadetsRoute/kitchenGadgetsGetRoute/index.js"
+import LaptopGet from "./routes/laptopRoute/laptopGetRoute/index.js"
+import PhoneGet from "./routes/phoneRoute/phoneGetRoute/index.js"
+import RefrigeratorGet from "./routes/refrigeratorRoute/refrigeratorGetRoute/index.js"
+import AcGet from "./routes/acRoute/acGetRoute/index.js"
+import AcPost from "./routes/acRoute/acPostRoute/index.js"
+import MonitorTVGet from "./routes/monitorTvRoute/monitorTvGetRoute/index.js"
+import Feedback from "./routes/feedbackRoute/customerFeedbackGetRoute/index.js"
 
 const app =express()
 
@@ -21,6 +22,7 @@ app.use(LaptopGet)
 app.use(PhoneGet)
 app.use(RefrigeratorGet)
 app.use(AcGet)
+app.use(AcPost)
 app.use(MonitorTVGet)
 app.use(Feedback)
 
