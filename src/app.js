@@ -12,6 +12,8 @@ import Feedback from "./routes/feedbackRoute/customerFeedbackGetRoute/index.js"
 import CartPost from "./routes/cartRoute/cartPostRoute/index.js"
 import CartGet from "./routes/cartRoute/cartGetRoute/index.js"
 import CartDelete from "./routes/cartRoute/cartDeleteRoute/index.js"
+import CartEmpty from "./routes/cartRoute/cartEmptyRoute/index.js"
+import UddoktaPay from "./routes/uddoktaPay/index.js"
 
 const app =express()
 
@@ -29,6 +31,8 @@ app.use(Feedback)
 app.use(CartPost)
 app.use(CartGet)
 app.use(CartDelete)
+app.use(CartEmpty)
+app.use(UddoktaPay)
 
 app.get("/health", (req, res)=>{
     res.send("Electronia server is running")
