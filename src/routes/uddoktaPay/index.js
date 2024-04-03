@@ -9,7 +9,7 @@ router.post("/payment", async(req, res)=>{
 
     const options = {
         method: 'POST',
-        url: process.env.UDDOKTAPAY_BASE_URL,
+        url: process.env.UDDOKTAPAY_CHECKOUT_URL,
         headers: {
             'Accept': 'application/json',
             'RT-UDDOKTAPAY-API-KEY': process.env.UDDOKTAPAY_API_KEY,
@@ -20,14 +20,17 @@ router.post("/payment", async(req, res)=>{
             email,
             amount,
             metadata: {},
-            redirect_url: 'https://electronia-99f43.web.app/success',
+            // redirect_url: `http://localhost:5173/success`,
+            redirect_url: `https://electronia-99f43.web.app/success`,
             cancel_url: 'https://electronia-99f43.web.app/cancel',
             webhook_url: 'https://electronia-99f43.web.app/ipn',
+            return_type:'GET'
         }
     };
 
     try {
-        const response = await axios.request(options);
+        const response = await axios.request(options);    
+        // console.log(response.data)
         res.json(response.data);
     } catch (error) {
         console.error(error);

@@ -14,9 +14,12 @@ import CartGet from "./routes/cartRoute/cartGetRoute/index.js"
 import CartDelete from "./routes/cartRoute/cartDeleteRoute/index.js"
 import CartEmpty from "./routes/cartRoute/cartEmptyRoute/index.js"
 import UddoktaPay from "./routes/uddoktaPay/index.js"
+import verifyPayment from "./routes/verifyPayment/index.js"
+import billPost from "./routes/billRoute/billPostRoute/index.js"
+import billGetByTnx from "./routes/billRoute/billGetRouteByTnx/index.js"
+import billGetByEmail from "./routes/billRoute/biilGetRouteByEmail/index.js"
 
 const app =express()
-
 
 applyMiddleWare(app)
 app.use(TechTrendsGet)
@@ -33,6 +36,10 @@ app.use(CartGet)
 app.use(CartDelete)
 app.use(CartEmpty)
 app.use(UddoktaPay)
+app.use(verifyPayment)
+app.use(billPost)
+app.use(billGetByTnx)
+app.use(billGetByEmail)
 
 app.get("/health", (req, res)=>{
     res.send("Electronia server is running")
